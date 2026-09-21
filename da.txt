@@ -1,0 +1,706 @@
+Construiește integral un joc mobil 3D numit ROMANIA TRUCK SIMULATOR, ca un simulator modern de camioane pentru Android/iOS.
+
+IMPORTANT:
+
+- Nu vreau un mockup.
+- Nu vreau wireframe-uri.
+- Nu vreau interfețe ASCII.
+- Nu vreau doar cod de exemplu.
+- Vreau un MVP JUCABIL, cu interfață grafică reală, asset-uri 3D, meniuri funcționale, economie și gameplay.
+- Tu trebuie să creezi și să configurezi tot proiectul necesar.
+- Nu mă pune pe mine să construiesc manual scenele sau UI-ul.
+- Dacă o funcție nu poate fi implementată complet în MVP, implementează o versiune funcțională simplificată.
+- Folosește asset-uri externe numai dacă licența lor permite utilizarea într-un joc. NU copia/extrage asset-uri din Euro Truck Simulator 2 sau alte jocuri.
+- Pentru camioane și alte vehicule reale, folosește asset-uri licențiate sau modele originale. Dacă nu există licență, folosește modele fictive foarte bine realizate.
+
+CONCEPT
+
+Jocul este un simulator de camioane concentrat pe România.
+
+Jucătorul începe ca șofer, cumpără primul camion, face curse, câștigă bani, își deschide propria firmă, cumpără camioane și remorci, angajează șoferi, construiește o flotă și dezvoltă compania.
+
+Vreau o experiență inspirată ca nivel de complexitate de simulatoarele de camioane pentru PC și de cele mai bune jocuri de condus de pe mobil, dar cu design și asset-uri proprii.
+
+PLATFORMĂ
+
+Prioritate:
+
+1. Android
+2. iOS
+
+Interfața trebuie proiectată special pentru touchscreen.
+
+Trebuie să existe:
+
+- controale tactile
+- butoane mari
+- gesturi
+- meniuri responsive
+- suport pentru diferite rezoluții
+- grafică optimizată pentru telefoane
+
+GRAFICĂ
+
+Vreau grafică 3D modernă.
+
+Nu vreau aspect de prototip.
+
+Vreau:
+
+- iluminare realistă
+- umbre
+- reflexii
+- materiale PBR
+- asfalt realist
+- vegetație
+- clădiri
+- indicatoare
+- marcaje rutiere
+- trafic
+- efecte de ploaie
+- ceață
+- apus/răsărit
+- zi/noapte
+
+Include presetări:
+
+LOW
+MEDIUM
+HIGH
+ULTRA
+
+Pentru telefoane slabe trebuie să existe optimizări.
+
+INTERFAȚĂ
+
+Interfața trebuie să arate ca un joc mobil comercial.
+
+NU folosi meniuri text simpliste.
+
+Meniul principal trebuie să aibă:
+
+- fundal 3D
+- camionul jucătorului într-un garaj
+- cameră cinematică
+- butoane grafice
+- iconițe
+- carduri
+- animații
+- bani
+- nivel
+- companie
+- vreme
+- notificări
+
+Structură:
+
+HOME
+
+- Continue
+- Drive
+- Company
+- Garage
+- Trucks
+- Trailers
+- Drivers
+- Contracts
+- Map
+- Settings
+
+Folosește un design premium, întunecat, modern, cu accente discrete.
+
+SHOWROOM CAMIOANE
+
+Creează un dealer 3D.
+
+Jucătorul vede camionul într-un showroom.
+
+Poate:
+
+- roti camera
+- face zoom
+- vedea exteriorul
+- vedea interiorul
+- deschide configurația
+- compara camioane
+- cumpăra camionul
+
+Fiecare camion trebuie să aibă:
+
+- putere
+- cuplu
+- consum
+- rezervor
+- transmisie
+- tracțiune
+- greutate
+- preț
+- kilometraj
+- stare
+- rating
+
+În MVP pune minimum 6 camioane fictive/originale, fiecare cu aspect diferit.
+
+Structura trebuie să permită adăugarea ulterioară de modele reale licențiate.
+
+REMORCI
+
+Creează dealer separat de remorci.
+
+Minimum:
+
+- Curtainsider
+- Refrigerated
+- Tanker
+- Flatbed
+- Container
+- Low Loader
+
+Fiecare are:
+
+- capacitate
+- greutate
+- preț
+- stare
+- kilometraj
+- tip marfă
+
+Remorcile trebuie să poată fi cumpărate și alocate camioanelor.
+
+CAMION
+
+Camionul trebuie să fie conducibil.
+
+Implementați:
+
+- accelerație
+- frână
+- direcție
+- schimbător automat
+- schimbător manual opțional
+- retarder
+- frână de motor
+- cruise control
+- avarii
+- semnalizare
+- faruri
+- fază lungă
+- claxon
+- ștergătoare
+
+Camionul trebuie să aibă fizică proprie.
+
+CAMERE
+
+Minimum:
+
+1. cabină
+2. bord
+3. exterior spate
+4. exterior lateral
+5. cameră liberă
+
+Camera din cabină trebuie să fie funcțională.
+
+Bordul trebuie să afișeze:
+
+- viteză
+- RPM
+- combustibil
+- temperatură
+- kilometraj
+
+CONTROL TOUCH
+
+Pe telefon:
+
+STÂNGA:
+
+- volan virtual
+
+DREAPTA:
+
+- accelerație
+- frână
+
+Butoane suplimentare:
+
+- faruri
+- semnalizare
+- avarii
+- claxon
+- cruise control
+- cameră
+- GPS
+
+Permite și:
+
+- steering wheel
+- buttons
+- tilt/gyro
+
+HARTA
+
+Creează o hartă proprie inspirată de România.
+
+Nu copia harta ETS2.
+
+Folosește date geografice și asset-uri care permit legal utilizarea lor într-un joc.
+
+MVP-ul trebuie să aibă o zonă jucabilă conectată între mai multe orașe.
+
+Include cel puțin:
+
+- București
+- Ploiești
+- Brașov
+- Sibiu
+- Cluj-Napoca
+- Bacău
+- Iași
+- Constanța
+- Craiova
+- Timișoara
+
+Nu este necesar ca fiecare stradă să fie reprezentată în MVP.
+
+Construiește o rețea simplificată de:
+
+- autostrăzi
+- drumuri naționale
+- drumuri secundare
+- sate
+- orașe
+
+Include:
+
+- sensuri giratorii
+- intersecții
+- semafoare
+- parcări
+- benzinării
+- service-uri
+- depozite
+- fabrici
+- ferme
+
+GPS
+
+GPS grafic în timpul condusului.
+
+Afișează:
+
+- traseu
+- poziție
+- destinație
+- kilometri rămași
+- ETA
+- următoarea manevră
+
+Voce pentru navigație.
+
+Exemplu:
+„În 500 de metri, virați la dreapta.”
+
+TRAFIC
+
+Creează trafic AI.
+
+Include:
+
+- autoturisme
+- camioane
+- autobuze
+- dube
+
+AI-ul trebuie să:
+
+- respecte semafoarele
+- păstreze banda
+- frâneze
+- accelereze
+- schimbe banda
+- facă viraje
+- evite obstacole
+
+VREME
+
+Implementați:
+
+- soare
+- nori
+- ploaie
+- furtună
+- ceață
+
+Sistem dinamic de zi/noapte.
+
+CURSE
+
+Creează un sistem de contracte.
+
+Exemple:
+
+București → Constanța
+Brașov → Sibiu
+Cluj → Oradea
+Bacău → Iași
+Timișoara → Arad
+
+Tipuri de marfă:
+
+- alimente
+- cereale
+- lemn
+- mașini
+- containere
+- materiale de construcții
+- utilaje
+- marfă frigorifică
+
+Fiecare cursă are:
+
+- distanță
+- greutate
+- profit
+- deadline
+- tip marfă
+- camion recomandat
+
+ECONOMIE
+
+Jucătorul începe cu o sumă mică.
+
+Câștigă bani din curse.
+
+Plătește:
+
+- combustibil
+- reparații
+- salarii
+- rate
+- taxe
+- costuri de operare
+
+Prețul combustibilului poate varia.
+
+FIRMA
+
+Jucătorul poate crea compania.
+
+Câmpuri:
+
+- nume
+- logo
+- culoare
+- sediu
+
+Dashboard-ul companiei trebuie să arate modern.
+
+Exemplu:
+
+COMPANIA MEA
+
+Balanță:
+€125.450
+
+Camioane:
+8
+
+Remorci:
+11
+
+Șoferi:
+7
+
+Garaje:
+2
+
+Reputație:
+74%
+
+Curse:
+438
+
+Profit:
+€18.420/lună
+
+ANGAJAȚI
+
+Jucătorul poate recruta șoferi.
+
+Fiecare șofer are:
+
+- nume
+- avatar
+- nivel
+- experiență
+- skill
+- salariu
+- consum
+- accident rate
+- profitabilitate
+
+Șoferii pot evolua.
+
+Niveluri:
+
+Beginner
+Driver
+Experienced
+Professional
+Expert
+
+FLOTA
+
+Jucătorul poate:
+
+- cumpăra camion
+- vinde camion
+- repara camion
+- modifica camion
+- aloca șofer
+- aloca remorcă
+- vedea profitul
+- vedea kilometrajul
+- vedea consumul
+
+GARAJE
+
+Creează sistem de garaje.
+
+Garajele pot avea niveluri:
+
+Level 1
+Level 2
+Level 3
+Premium
+
+Fiecare nivel permite mai multe camioane.
+
+Jucătorul poate cumpăra garaje în orașe diferite.
+
+UPGRADE CAMION
+
+Permite:
+
+- motor
+- transmisie
+- rezervor
+- frâne
+- suspensie
+- anvelope
+- GPS
+- lumini
+- interior
+- scaune
+- volan
+- vopsea
+- accesorii
+
+DETERIORARE
+
+Camionul trebuie să aibă stare.
+
+Accidentele și utilizarea afectează:
+
+- motor
+- transmisie
+- frâne
+- anvelope
+- caroserie
+
+Reparațiile costă bani.
+
+COMBUSTIBIL
+
+Include stații de carburant.
+
+Jucătorul trebuie să alimenteze.
+
+Consumul depinde de:
+
+- motor
+- greutate
+- viteză
+- teren
+- accelerație
+
+POLIȚIE
+
+Include sistem simplificat:
+
+- limită de viteză
+- amenzi
+- semafor
+- coliziuni
+
+În MVP poate fi simplificat, dar trebuie să funcționeze.
+
+UI ÎN TIMPUL CONDUSULUI
+
+HUD modern:
+
+sus:
+
+- GPS
+- viteză
+- limită
+
+jos:
+
+- volan
+- accelerație
+- frână
+- faruri
+- semnalizare
+- claxon
+- cameră
+
+HUD-ul trebuie să poată fi ascuns.
+
+SAVE SYSTEM
+
+Salvează:
+
+- bani
+- companie
+- camioane
+- remorci
+- angajați
+- garaje
+- contracte
+- progres
+- setări
+
+ASSET SYSTEM
+
+Construiește proiectul astfel încât asset-urile să poată fi schimbate fără rescrierea jocului.
+
+Structură:
+
+assets/
+trucks/
+trailers/
+cars/
+buildings/
+roads/
+vegetation/
+signs/
+ui/
+sounds/
+maps/
+
+Folosește ".glb/.gltf" pentru modelele 3D unde este posibil.
+
+Nu include în proiect materiale piratate sau extrase din alte jocuri.
+
+Dacă găsești asset-uri gratuite/licențiate, verifică licența înainte de includere.
+
+AUDIO
+
+Include:
+
+- motor
+- turbo
+- frâne
+- pneuri
+- ploaie
+- vânt
+- trafic
+- claxon
+- semnalizare
+- ștergătoare
+- UI sounds
+
+Sunetul motorului trebuie să varieze cu RPM.
+
+OPTIMIZARE MOBILE
+
+Obligatoriu:
+
+- LOD
+- occlusion culling
+- texture compression
+- batching
+- object pooling pentru trafic
+- streaming pentru hartă
+- limitarea numărului de obiecte active
+- rezoluție adaptivă dacă este necesar
+
+Nu încărca toată România într-o singură scenă.
+
+Împarte harta în zone și încarcă/descarcă zonele dinamic.
+
+MVP FINAL
+
+La pornirea jocului:
+
+1. apare splash screen
+2. apare meniul principal
+3. jucătorul vede camionul în garaj
+4. poate intra în Dealer
+5. poate cumpăra camion
+6. poate cumpăra remorcă
+7. poate accepta o cursă
+8. poate conduce
+9. livrează marfa
+10. primește bani
+11. poate crea companie
+12. poate angaja șofer
+13. poate cumpăra al doilea camion
+14. poate aloca șoferul
+15. șoferul generează venit
+16. poate cumpăra garaj
+17. poate salva jocul
+
+DESIGN
+
+Vreau un design:
+
+- premium
+- realist
+- modern
+- cinematic
+- dark
+- inspirat de interfețele jocurilor moderne de mașini și camioane de pe mobil
+
+Nu copia interfața exactă a unui alt joc.
+
+Folosește:
+
+- carduri
+- iconițe
+- fotografii/renderuri
+- butoane cu animații
+- tab-uri
+- meniuri glisabile
+- panouri transparente
+- blur unde este performant
+- tranziții
+- microanimații
+
+IMPORTANT PENTRU IMPLEMENTARE
+
+Nu te opri după ce creezi structura.
+
+Construiește efectiv proiectul.
+
+Dacă ai acces la generare de fișiere:
+
+- creează toate fișierele
+- creează scenele
+- creează scripturile
+- creează UI-ul
+- creează asset placeholders
+- configurează proiectul
+- verifică erorile
+- rulează/testează proiectul
+- repară erorile
+
+La final vreau un proiect complet care poate fi deschis și rulat.
+
+Dacă o anumită componentă externă nu poate fi descărcată automat, creează un placeholder funcțional și explică exact unde trebuie pus asset-ul, fără să blochezi restul jocului.
+
+OBIECTIV:
+Vreau ca rezultatul să semene cu un joc mobil adevărat de truck simulator, nu cu un proiect școlar sau un demo cu butoane simple.

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Premium dark palette: deep night blues, warm truck-lamp amber, signal green. -->
+    <color name="bg_deep">#FF05070A</color>
+    <color name="bg_base">#FF0B0E13</color>
+    <color name="bg_panel">#FF121722</color>
+    <color name="bg_panel_alt">#FF18202E</color>
+    <color name="bg_elevated">#FF1E2836</color>
+    <color name="stroke_soft">#33FFFFFF</color>
+    <color name="stroke_strong">#59FFFFFF</color>
+
+    <color name="accent">#FFFFD166</color>
+    <color name="accent_dim">#FFB38F33</color>
+    <color name="accent_alt">#FF06D6A0</color>
+    <color name="accent_alt_dim">#FF0A8F6C</color>
+    <color name="danger">#FFEF476F</color>
+    <color name="warning">#FFFFA03A</color>
+    <color name="info">#FF3DA9FC</color>
+    <color name="speed_limit">#FFE63946</color>
+
+    <color name="text_primary">#FFE9EEF6</color>
+    <color name="text_secondary">#FFA9B6C7</color>
+    <color name="text_tertiary">#FF6F8299</color>
+    <color name="text_on_accent">#FF1A1408</color>
+
+    <color name="glass_scrim">#99000000</color>
+    <color name="glass_fill">#22FFFFFF</color>
+    <color name="hud_scrim_top">#B3060A0F</color>
+    <color name="hud_scrim_bottom">#CC060A0F</color>
+</resources>

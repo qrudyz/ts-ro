@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Romania Truck</string>
+    <string name="app_tagline">SIMULATOR DE CAMIOANE</string>
+    <string name="loading">Se încarcă…</string>
+    <string name="loading_world">Se generează România…</string>
+    <string name="loading_truck">Se pregătește camionul…</string>
+
+    <!-- Menu sections -->
+    <string name="menu_home">Acasă</string>
+    <string name="menu_drive">Condu</string>
+    <string name="menu_company">Companie</string>
+    <string name="menu_garage">Garaj</string>
+    <string name="menu_trucks">Camioane</string>
+    <string name="menu_trailers">Remorci</string>
+    <string name="menu_drivers">Șoferi</string>
+    <string name="menu_contracts">Curse</string>
+    <string name="menu_map">Hartă</string>
+    <string name="menu_settings">Setări</string>
+    <string name="menu_back">Înapoi</string>
+    <string name="menu_close">Închide</string>
+
+    <!-- Common actions -->
+    <string name="action_continue">Continuă</string>
+    <string name="action_buy">Cumpără</string>
+    <string name="action_sell">Vinde</string>
+    <string name="action_repair">Repară</string>
+    <string name="action_refuel">Alimentează</string>
+    <string name="action_accept">Acceptă cursa</string>
+    <string name="action_cancel">Anulează</string>
+    <string name="action_start">Pornește</string>
+    <string name="action_save">Salvează</string>
+    <string name="action_hire">Angajează</string>
+    <string name="action_fire">Concediază</string>
+    <string name="action_confirm">Confirmă</string>
+    <string name="action_upgrade">Îmbunătățește</string>
+    <string name="action_allocate">Alocă</string>
+    <string name="action_compare">Compară</string>
+    <string name="action_create_company">Creează compania</string>
+
+    <!-- Stats / labels -->
+    <string name="label_balance">Balanță</string>
+    <string name="label_level">Nivel</string>
+    <string name="label_reputation">Reputație</string>
+    <string name="label_trucks">Camioane</string>
+    <string name="label_trailers">Remorci</string>
+    <string name="label_drivers">Șoferi</string>
+    <string name="label_garages">Garaje</string>
+    <string name="label_profit_month">Profit/lună</string>
+    <string name="label_power">Putere</string>
+    <string name="label_torque">Cuplu</string>
+    <string name="label_consumption">Consum</string>
+    <string name="label_tank">Rezervor</string>
+    <string name="label_transmission">Transmisie</string>
+    <string name="label_drivetrain">Tracțiune</string>
+    <string name="label_weight">Greutate</string>
+    <string name="label_price">Preț</string>
+    <string name="label_odometer">Kilometraj</string>
+    <string name="label_condition">Stare</string>
+    <string name="label_rating">Rating</string>
+    <string name="label_capacity">Capacitate</string>
+    <string name="label_cargo">Tip marfă</string>
+    <string name="label_distance">Distanță</string>
+    <string name="label_deadline">Deadline</string>
+    <string name="label_reward">Profit</string>
+    <string name="label_salary">Salariu</string>
+    <string name="label_skill">Skill</string>
+    <string name="label_experience">Experiență</string>
+    <string name="label_speed">Viteză</string>
+
+    <!-- Driving HUD -->
+    <string name="hud_gear">Treaptă</string>
+    <string name="hud_rpm">RPM</string>
+    <string name="hud_fuel">Combustibil</string>
+    <string name="hud_temp">Temperatură</string>
+    <string name="hud_cruise">Cruise</string>
+    <string name="hud_eta">Sosire</string>
+    <string name="hud_remaining">Rămași</string>
+    <string name="hud_next_maneuver">Următoarea manevră</string>
+    <string name="hud_job_complete">Marfă livrată!</string>
+    <string name="hud_fine">Amendă</string>
+    <string name="hud_damage">Deteriorare</string>
+</resources>
