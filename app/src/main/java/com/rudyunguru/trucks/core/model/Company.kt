@@ -52,7 +52,7 @@ data class PlayerProfile(
     val level: Int = 1,
     val xp: Int = 0,
     /** Enough for a used starter unit or a deposit on a loan-financed MAN TGL. */
-    val moneyEuro: Long = 45_000,
+    val moneyEuro: Long = 75_000,
     val reputation: Int = 0,
     val currentCityId: String = "bucuresti",
 ) {

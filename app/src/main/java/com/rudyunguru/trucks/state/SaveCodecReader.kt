@@ -64,7 +64,7 @@ object SaveCodecReader {
         avatarIndex = m.int("avatarIndex", 0),
         level = m.int("level", 1),
         xp = m.int("xp", 0),
-        moneyEuro = m.long("moneyEuro", 45_000),
+        moneyEuro = m.long("moneyEuro", 75_000),
         reputation = m.int("reputation", 0),
         currentCityId = m.str("currentCityId", "bucuresti"),
     )

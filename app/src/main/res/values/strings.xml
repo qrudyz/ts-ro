@@ -2,6 +2,7 @@
 <resources>
     <string name="app_name">Romania Truck</string>
     <string name="app_tagline">SIMULATOR DE CAMIOANE</string>
+    <string name="app_tagline_short">RTS</string>
     <string name="loading">Se încarcă…</string>
     <string name="loading_world">Se generează România…</string>
     <string name="loading_truck">Se pregătește camionul…</string>
