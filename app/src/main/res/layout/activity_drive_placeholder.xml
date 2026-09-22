@@ -1,14 +1,182 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@android:color/black">
+    android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/scaffoldMessage"
+    <view
+        android:id="@+id/glView"
+        class="com.rudyunguru.trucks.gl.GameGLView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!-- Top HUD: job info left, pause button right (TOE3 style) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:orientation="horizontal"
+        android:padding="12dp"
+        android:gravity="center_vertical">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:background="#66000000"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/hudStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/hud_remaining"
+                android:textColor="#FFFFFF"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/hudRemaining"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0.0 km"
+                android:textColor="#FFD54F"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnPause"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="12dp"
+            android:background="#66000000"
+            android:text="☰"
+            android:textColor="#FFFFFF"
+            android:textSize="22sp" />
+    </LinearLayout>
+
+    <!-- Bottom-left: rotary steering wheel + horn (TOE3 style) -->
+    <FrameLayout
+        android:layout_width="170dp"
+        android:layout_height="170dp"
+        android:layout_gravity="bottom|start"
+        android:layout_margin="16dp">
+
+        <ImageView
+            android:id="@+id/steeringWheel"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitCenter"
+            android:src="@drawable/steering_wheel" />
+
+        <TextView
+            android:id="@+id/btnHorn"
+            android:layout_width="68dp"
+            android:layout_height="68dp"
+            android:layout_gravity="center"
+            android:background="@drawable/bg_horn"
+            android:gravity="center"
+            android:text="📢"
+            android:textSize="26sp" />
+    </FrameLayout>
+
+    <!-- Bottom-right: brake + throttle pedals, D/N/R stick with +/- shifting -->
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="@string/loading_truck"
-        android:textColor="@color/text_secondary" />
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp"
+        android:orientation="horizontal"
+        android:gravity="bottom">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnBrake"
+                android:layout_width="70dp"
+                android:layout_height="104dp"
+                android:background="#66000000"
+                android:text="🛑"
+                android:textSize="26sp" />
+
+            <Button
+                android:id="@+id/btnThrottle"
+                android:layout_width="70dp"
+                android:layout_height="104dp"
+                android:layout_marginStart="8dp"
+                android:background="#66000000"
+                android:text="⛽"
+                android:textSize="26sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="14dp"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btnGearUp"
+                android:layout_width="56dp"
+                android:layout_height="44dp"
+                android:background="#66000000"
+                android:text="+"
+                android:textColor="#FFFFFF"
+                android:textSize="22sp" />
+
+            <TextView
+                android:id="@+id/hudGear"
+                android:layout_width="56dp"
+                android:layout_height="52dp"
+                android:layout_marginTop="4dp"
+                android:background="#66000000"
+                android:gravity="center"
+                android:text="D"
+                android:textColor="#FFD54F"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btnGearDown"
+                android:layout_width="56dp"
+                android:layout_height="44dp"
+                android:layout_marginTop="4dp"
+                android:background="#66000000"
+                android:text="−"
+                android:textColor="#FFFFFF"
+                android:textSize="22sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Speedometer overlay (bottom-center) -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="24dp"
+        android:background="#66000000"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/hudSpeed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0 km/h"
+            android:textColor="#FFFFFF"
+            android:textSize="26sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/hudFuel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="⛽ 100%"
+            android:textColor="#CCCCCC"
+            android:textSize="13sp" />
+    </LinearLayout>
 </FrameLayout>

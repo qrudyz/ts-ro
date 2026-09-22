@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="200dp"
+    android:viewportWidth="200"
+    android:viewportHeight="200">
+
+    <!-- Outer rim -->
+    <path
+        android:fillColor="#2B2B2B"
+        android:pathData="M100,4 A96,96 0 1,0 100,196 A96,96 0 1,0 100,4 Z" />
+    <path
+        android:fillColor="#3D3D3D"
+        android:pathData="M100,10 A90,90 0 1,0 100,190 A90,90 0 1,0 100,10 Z" />
+    <path
+        android:fillColor="#242424"
+        android:pathData="M100,22 A78,78 0 1,0 100,178 A78,78 0 1,0 100,22 Z" />
+
+    <!-- Spokes -->
+    <path
+        android:fillColor="#4A4A4A"
+        android:pathData="M88,88 L112,88 L118,196 L82,196 Z" />
+    <path
+        android:fillColor="#4A4A4A"
+        android:pathData="M88,92 L30,140 L44,158 L96,110 Z" />
+    <path
+        android:fillColor="#4A4A4A"
+        android:pathData="M112,92 L170,140 L156,158 L104,110 Z" />
+
+    <!-- Center hub -->
+    <path
+        android:fillColor="#5A5A5A"
+        android:pathData="M100,66 A34,34 0 1,0 100,134 A34,34 0 1,0 100,66 Z" />
+    <path
+        android:fillColor="#6E6E6E"
+        android:pathData="M100,74 A26,26 0 1,0 100,126 A26,26 0 1,0 100,74 Z" />
+</vector>
