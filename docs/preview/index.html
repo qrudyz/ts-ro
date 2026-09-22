@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Romania Truck — Preview</title>
+<style>
+  html,body{margin:0;height:100%;background:#0a0e14;overflow:hidden;font-family:sans-serif}
+  #c{width:100%;height:100%;display:block}
+  .hud{position:fixed;color:#fff;text-shadow:0 1px 3px #000;pointer-events:none}
+  #title{top:10px;left:14px;font-size:18px;font-weight:bold}
+  #info{top:34px;left:14px;font-size:12px;color:#aab}
+  #speed{bottom:14px;left:14px;font-size:34px;font-weight:bold}
+  #speed span{font-size:14px;color:#8ab}
+  #gear{bottom:14px;right:14px;font-size:26px;font-weight:bold;color:#fc3}
+  #hint{bottom:52px;left:14px;font-size:11px;color:#778}
+</style>
+</head>
+<body>
+<canvas id="c"></canvas>
+<div class="hud" id="title">🚛 Romania Truck — Preview (WebGL)</div>
+<div class="hud" id="info">W/S: accelerează/frânează · A/D: direție · trage cu mouse-ul: cameră</div>
+<div class="hud" id="speed">0 <span>km/h</span></div>
+<div class="hud" id="gear">N</div>
+<div class="hud" id="hint">Preview WebGL — funcționează direct în browser, fără instalare</div>
+<script src="main.js"></script>
+<script src="geom.js"></script>
+<script src="world.js"></script>
+<script src="truck.js"></script>
+<script src="loop.js"></script>
+
+</body>
+</html>
