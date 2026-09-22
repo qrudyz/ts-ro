@@ -47,7 +47,8 @@ class GameSession(
         
         physics = TruckPhysics(spec).apply {
             val city = com.rudyunguru.trucks.core.catalog.CityCatalog.byId(ownedTruck.garageCityId)
-            reset(city.x, 0.0, city.z, 0.0, 0.0)
+            // Spawn slightly off the city center so the truck stands on the road, not inside a building.
+            reset(city.x + 40.0, 0.0, city.z + 120.0, 0.0, 0.0)
         }
         
         world.generate(1337, 20, state.settings)
@@ -133,9 +134,17 @@ class GameSession(
             y = ps.y.toFloat()
             z = ps.z.toFloat()
             headingRad = ps.heading.toFloat()
+            bodyRoll = ps.bodyRoll.toFloat()
+            bodyPitch = ps.bodyPitch.toFloat()
             speedUnits = ps.speedUnits.toFloat()
+            steeringAngleRad = ps.steeringAngleRad.toFloat()
+            wheelSpinRad = ps.wheelSpinRad.toFloat()
             engineRpm = ps.engineRpm.toFloat()
             gear = ps.gear
+            brakeLights = ps.brakeForceN > 100.0 || input.brake > 0.0 || input.handbrake
+            headlights = environment().headlightsRecommended
+            trailerAttached = ps.trailerAttached
+            trailerYawRad = ps.trailerAngleRad.toFloat()
         }
     }
 

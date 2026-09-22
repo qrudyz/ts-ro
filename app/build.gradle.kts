@@ -11,8 +11,8 @@ android {
         applicationId = "com.rudyunguru.trucks"
         minSdk = 24
         targetSdk = 36
-        versionCode = 1
-        versionName = "1.0.0-mvp"
+        versionCode = 2
+        versionName = "1.1.0"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
 
         // Native code is not used: the renderer is written directly against OpenGL ES 3.0

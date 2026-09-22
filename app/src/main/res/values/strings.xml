@@ -2,7 +2,8 @@
 <resources>
     <string name="app_name">Romania Truck</string>
     <string name="app_tagline">SIMULATOR DE CAMIOANE</string>
-    <string name="app_tagline_short">RTS</string>
+    <!-- Language-neutral duplicate so lintVital does not flag "ExtraTranslation". -->
+    <string name="app_tagline_short" translatable="false">RTS</string>
     <string name="loading">Se încarcă…</string>
     <string name="loading_world">Se generează România…</string>
     <string name="loading_truck">Se pregătește camionul…</string>
@@ -10,6 +11,8 @@
     <!-- Menu sections -->
     <string name="menu_home">Acasă</string>
     <string name="menu_drive">Condu</string>
+    <string name="menu_buy_truck">Cumpără camion</string>
+    <string name="menu_save">Salvează jocul</string>
     <string name="menu_company">Companie</string>
     <string name="menu_garage">Garaj</string>
     <string name="menu_trucks">Camioane</string>

@@ -8,10 +8,14 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.rudyunguru.trucks.R
 import com.rudyunguru.trucks.core.Format
+import com.rudyunguru.trucks.core.catalog.CityCatalog
+import com.rudyunguru.trucks.core.catalog.TruckCatalog
 import com.rudyunguru.trucks.state.GameHolder
 
 /**
- * Home shell: company status, quick actions and the entry point into driving.
+ * TOE3-style dealer screen: the 3D garage with the truck on a rotating platform fills the whole
+ * screen; the shop UI is a slim panel on the right side. The whole activity is landscape, like
+ * the driving session, so the game never rotates.
  */
 class MainActivity : AppCompatActivity() {
 
@@ -24,12 +28,24 @@ class MainActivity : AppCompatActivity() {
 
         findViewById<TextView>(R.id.titleCompany).text =
             d.company.name.ifEmpty { getString(R.string.app_name) }
-        findViewById<TextView>(R.id.labelMoney).text =
-            getString(R.string.label_balance) + ": " + Format.money(d.player.moneyEuro)
+        findViewById<TextView>(R.id.labelMoney).text = Format.money(d.player.moneyEuro)
         findViewById<TextView>(R.id.labelFleet).text =
-            getString(R.string.label_trucks) + ": " + d.trucks.size + "  •  " +
-                getString(R.string.label_drivers) + ": " + d.drivers.size
+            getString(R.string.label_trucks) + ": " + d.trucks.size
 
+        // --- The truck standing in the garage -------------------------------------------------
+        val gl = findViewById<com.rudyunguru.trucks.gl.GameGLView>(R.id.glView)
+        val owned = state.trucks().firstOrNull()
+        val shown = owned?.let { TruckCatalog.byId(it.modelId) } ?: TruckCatalog.TRUCKS.minBy { it.priceEuro }
+        gl.scene().setSceneMode(com.rudyunguru.trucks.gl.api.SceneMode.GARAGE)
+        gl.scene().setShowroomVehicle(
+            shown.meshVariant, 0,
+            owned?.paintHex ?: shown.paintOptions.firstOrNull() ?: "#D9051F", "", true,
+        )
+
+        val city = CityCatalog.byId(d.player.currentCityId)
+        findViewById<TextView>(R.id.labelGarage).text = city.name
+
+        // --- Actions ---------------------------------------------------------------------------
         findViewById<Button>(R.id.btnDrive).setOnClickListener {
             val truck = state.trucks().firstOrNull()
             if (truck == null) {
@@ -40,7 +56,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         findViewById<Button>(R.id.btnNewTruck).setOnClickListener {
-            val cheapest = com.rudyunguru.trucks.core.catalog.TruckCatalog.TRUCKS.minBy { it.priceEuro }
+            val cheapest = TruckCatalog.TRUCKS.minBy { it.priceEuro }
             val res = state.buyTruck(cheapest.id, "#D9051F", d.player.currentCityId, null)
             Toast.makeText(this, res.message, Toast.LENGTH_SHORT).show()
             recreate()

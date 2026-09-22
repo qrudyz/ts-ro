@@ -1,22 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- TOE3-style main menu: the 3D garage fills the screen, the shop UI is a slim panel on the right. -->
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <!-- Garage backdrop -->
-    <View
+    <com.rudyunguru.trucks.gl.GameGLView
+        android:id="@+id/glView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#1A1A2E" />
+        android:layout_height="match_parent" />
 
-    <!-- Top bar: company + money (TOE3 shows money always) -->
+    <!-- Top bar: company and garage on the left, balance on the right -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="top"
         android:orientation="horizontal"
-        android:padding="14dp"
-        android:gravity="center_vertical">
+        android:paddingStart="14dp"
+        android:paddingEnd="14dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp">
 
         <LinearLayout
             android:layout_width="0dp"
@@ -28,69 +29,104 @@
                 android:id="@+id/titleCompany"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/app_name"
+                android:shadowColor="#B0000000"
+                android:shadowDx="1"
+                android:shadowDy="2"
+                android:shadowRadius="4"
                 android:textColor="#FFFFFF"
-                android:textSize="20sp"
+                android:textSize="19sp"
                 android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/labelFleet"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="#B0B0B0"
-                android:textSize="12sp" />
+                android:shadowColor="#B0000000"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:shadowRadius="3"
+                android:textColor="#E0E0E0"
+                android:textSize="13sp" />
         </LinearLayout>
+
+        <TextView
+            android:id="@+id/labelGarage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="12dp"
+            android:shadowColor="#B0000000"
+            android:shadowDx="1"
+            android:shadowDy="1"
+            android:shadowRadius="3"
+            android:textColor="#90CAF9"
+            android:textSize="14sp" />
 
         <TextView
             android:id="@+id/labelMoney"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="#AA1C1C1E"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:paddingTop="6dp"
+            android:paddingBottom="6dp"
+            android:shadowColor="#B0000000"
+            android:shadowDx="1"
+            android:shadowDy="1"
+            android:shadowRadius="3"
             android:textColor="#FFD54F"
-            android:textSize="22sp"
+            android:textSize="16sp"
             android:textStyle="bold" />
     </LinearLayout>
 
-    <!-- Big card buttons, TOE3 style -->
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="76dp"
-        android:fillViewport="true">
+    <!-- Action panel on the right, like the TOE3 garage buttons -->
+    <LinearLayout
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|center_vertical"
+        android:layout_marginEnd="12dp"
+        android:orientation="vertical">
 
-        <LinearLayout
+        <Button
+            android:id="@+id/btnDrive"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="20dp">
+            android:layout_height="52dp"
+            android:layout_marginBottom="10dp"
+            android:backgroundTint="#CCE53935"
+            android:text="@string/menu_drive"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold" />
 
-            <Button
-                android:id="@+id/btnDrive"
-                android:layout_width="match_parent"
-                android:layout_height="76dp"
-                android:text="@string/menu_drive"
-                android:textSize="22sp"
-                android:textStyle="bold" />
+        <Button
+            android:id="@+id/btnNewTruck"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginBottom="10dp"
+            android:backgroundTint="#CC37474F"
+            android:text="@string/menu_buy_truck"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp" />
 
-            <Button
-                android:id="@+id/btnNewTruck"
-                android:layout_width="match_parent"
-                android:layout_height="64dp"
-                android:layout_marginTop="12dp"
-                android:text="@string/menu_trucks" />
+        <Button
+            android:id="@+id/btnContracts"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginBottom="10dp"
+            android:backgroundTint="#CC37474F"
+            android:text="@string/menu_contracts"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp" />
 
-            <Button
-                android:id="@+id/btnContracts"
-                android:layout_width="match_parent"
-                android:layout_height="64dp"
-                android:layout_marginTop="12dp"
-                android:text="@string/menu_contracts" />
-
-            <Button
-                android:id="@+id/btnSave"
-                android:layout_width="match_parent"
-                android:layout_height="56dp"
-                android:layout_marginTop="12dp"
-                android:text="@string/action_save" />
-        </LinearLayout>
-    </ScrollView>
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:backgroundTint="#CC263238"
+            android:text="@string/menu_save"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp" />
+    </LinearLayout>
 </FrameLayout>
